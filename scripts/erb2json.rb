@@ -147,6 +147,9 @@ def frontmost_application(type, app_aliases)
     '^com\.apple\.dt\.Xcode$'
   ]
 
+  jetbrains_bundle_identifiers = [
+    '^com\.jetbrains\.',
+  ]
   # ----------------------------------------
 
   bundle_identifiers = []
@@ -186,6 +189,9 @@ def frontmost_application(type, app_aliases)
 
     when 'xcode'
       bundle_identifiers.concat(xcode_bundle_identifiers)
+
+    when 'jetbrains'
+      bundle_identifiers.concat(jetbrains_bundle_identifiers)
 
     else
       $stderr << "unknown app_alias: #{app_alias}\n"
