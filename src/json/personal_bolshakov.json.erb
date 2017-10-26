@@ -1,278 +1,112 @@
 {
-  "title": "Personal rules (@bolshakov)",
-  "rules": [
-    {
-      "description": "Fix Command + Z/X/C/V on Dvorak Layout",
-      "manipulators": [
+    "title": "Personal rules (@bolshakov)",
+    "rules": [
         {
-          "type": "basic",
-          "from": <%= from("z", ["left_command"], []) %>,
-          "to": <%= to([["z", ["left_command"]]]) %>,
-          "conditions": [ <%= frontmost_application_unless("jetbrains") %> ]
+            "description": "Fix Command + Z/X/C/V on Dvorak Layout",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("z", ["left_command"], []) %>,
+                    "to": <%= to([["z", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("jetbrains") %>
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("x", ["left_command"], []) %>,
+                    "to": <%= to([["x", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("jetbrains") %>
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("c", ["left_command"], []) %>,
+                    "to": <%= to([["c", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("jetbrains") %>
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("v", ["left_command"], []) %>,
+                    "to": <%= to([["v", ["left_command"]]]) %>,
+                    "conditions": [
+                        <%= frontmost_application_unless("jetbrains") %>
+                    ]
+                }
+            ]
         },
         {
-          "type": "basic",
-          "from": <%= from("x", ["left_command"], []) %>,
-          "to": <%= to([["x", ["left_command"]]]) %>,
-          "conditions": [ <%= frontmost_application_unless("jetbrains") %> ]
+            "description": "Change Command + I/J/K/L to Arrow Keys",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("i", ["left_command"], ["any"]) %>,
+                    "to": <%= to([["up_arrow"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("j", ["left_command"], ["any"])%>,
+                    "to": <%= to([["left_arrow"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("k", ["left_command"], ["any"])%>,
+                    "to": <%= to([["down_arrow"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("l", ["left_command"], ["any"])%>,
+                    "to": <%= to([["right_arrow"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("u", ["left_command"], ["any"])%>,
+                    "to": <%= to([["left_arrow", ["left_option"]]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("o", ["left_command"], ["any"])%>,
+                    "to": <%= to([["right_arrow", ["left_option"]]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("j", ["left_command"], ["any"])%>,
+                    "to": <%= to([["left_arrow", ["left_option"]]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("l", ["left_command"], ["any"])%>,
+                    "to": <%= to([["right_arrow", ["left_option"]]]) %>
+                }
+            ]
         },
         {
-          "type": "basic",
-          "from": <%= from("c", ["left_command"], []) %>,
-          "to": <%= to([["c", ["left_command"]]]) %>,
-          "conditions": [ <%= frontmost_application_unless("jetbrains") %> ]
-        },
-        {
-          "type": "basic",
-          "from": <%= from("v", ["left_command"], []) %>,
-          "to": <%= to([["v", ["left_command"]]]) %>,
-          "conditions": [ <%= frontmost_application_unless("jetbrains") %> ]
+            "description": "Change Command + D/F to Backspace/Delete, and Command + E/R to Option + Backspace/Delete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("d", ["right_command"], ["any"])%>,
+                    "to": <%= to([["delete_or_backspace"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("f", ["right_command"], ["any"])%>,
+                    "to": <%= to([["delete_forward"]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("e", ["right_command"], ["any"])%>,
+                    "to": <%= to([["delete_or_backspace", ["right_option"]]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("r", ["right_command"], ["any"])%>,
+                    "to": <%= to([["delete_forward", ["right_option"]]]) %>
+                }
+            ]
         }
-      ]
-    },
-    {
-      "description": "Change Command + I/J/K/L to Arrow Keys",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "i",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "k",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "u",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "o",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": [
-                "left_option"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "left_option"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    },
-    {
-      "description": "Change Command + D/F to Backspace/Delete, and Command + E/R to Option + Backspace/Delete",
-      "manipulators": [
-        {
-          "from": {
-            "key_code": "d",
-            "modifiers": {
-              "mandatory": [
-                "right_command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "f",
-            "modifiers": {
-              "mandatory": [
-                "right_command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_forward"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": [
-                "right_command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace",
-              "modifiers": [
-                "right_option"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
-            "key_code": "r",
-            "modifiers": {
-              "mandatory": [
-                "right_command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_forward",
-              "modifiers": [
-                "right_option"
-              ]
-            }
-          ],
-          "type": "basic"
-        }
-      ]
-    }
-  ]
+    ]
 }
