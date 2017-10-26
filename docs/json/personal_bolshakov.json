@@ -134,6 +134,14 @@
             {
               "key_code": "up_arrow"
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
+            }
           ]
         },
         {
@@ -152,6 +160,14 @@
           "to": [
             {
               "key_code": "left_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
             }
           ]
         },
@@ -172,6 +188,14 @@
             {
               "key_code": "down_arrow"
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
+            }
           ]
         },
         {
@@ -190,6 +214,14 @@
           "to": [
             {
               "key_code": "right_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
             }
           ]
         },
@@ -211,6 +243,14 @@
               "key_code": "left_arrow",
               "modifiers": [
                 "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
               ]
             }
           ]
@@ -235,6 +275,14 @@
                 "left_option"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
+            }
           ]
         },
         {
@@ -257,6 +305,14 @@
                 "left_option"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
+            }
           ]
         },
         {
@@ -277,6 +333,14 @@
               "key_code": "right_arrow",
               "modifiers": [
                 "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
               ]
             }
           ]
@@ -303,6 +367,14 @@
             {
               "key_code": "delete_or_backspace"
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
+            }
           ]
         },
         {
@@ -321,6 +393,14 @@
           "to": [
             {
               "key_code": "delete_forward"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
             }
           ]
         },
@@ -344,6 +424,14 @@
                 "right_option"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
+              ]
+            }
           ]
         },
         {
@@ -364,6 +452,14 @@
               "key_code": "delete_forward",
               "modifiers": [
                 "right_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\."
               ]
             }
           ]

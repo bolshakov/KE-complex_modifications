@@ -8,33 +8,25 @@
                     "type": "basic",
                     "from": <%= from("z", ["left_command"], []) %>,
                     "to": <%= to([["z", ["left_command"]]]) %>,
-                    "conditions": [
-                        <%= frontmost_application_unless("jetbrains") %>
-                    ]
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("x", ["left_command"], []) %>,
                     "to": <%= to([["x", ["left_command"]]]) %>,
-                    "conditions": [
-                        <%= frontmost_application_unless("jetbrains") %>
-                    ]
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("c", ["left_command"], []) %>,
                     "to": <%= to([["c", ["left_command"]]]) %>,
-                    "conditions": [
-                        <%= frontmost_application_unless("jetbrains") %>
-                    ]
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("v", ["left_command"], []) %>,
                     "to": <%= to([["v", ["left_command"]]]) %>,
-                    "conditions": [
-                        <%= frontmost_application_unless("jetbrains") %>
-                    ]
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 }
             ]
         },
@@ -44,42 +36,50 @@
                 {
                     "type": "basic",
                     "from": <%= from("i", ["left_command"], ["any"]) %>,
-                    "to": <%= to([["up_arrow"]]) %>
+                    "to": <%= to([["up_arrow"]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("j", ["left_command"], ["any"])%>,
-                    "to": <%= to([["left_arrow"]]) %>
+                    "to": <%= to([["left_arrow"]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("k", ["left_command"], ["any"])%>,
-                    "to": <%= to([["down_arrow"]]) %>
+                    "to": <%= to([["down_arrow"]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
-                {
+                    {
                     "type": "basic",
                     "from": <%= from("l", ["left_command"], ["any"])%>,
-                    "to": <%= to([["right_arrow"]]) %>
+                    "to": <%= to([["right_arrow"]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("u", ["left_command"], ["any"])%>,
-                    "to": <%= to([["left_arrow", ["left_option"]]]) %>
+                    "to": <%= to([["left_arrow", ["left_option"]]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("o", ["left_command"], ["any"])%>,
-                    "to": <%= to([["right_arrow", ["left_option"]]]) %>
+                    "to": <%= to([["right_arrow", ["left_option"]]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("j", ["left_command"], ["any"])%>,
-                    "to": <%= to([["left_arrow", ["left_option"]]]) %>
+                    "to": <%= to([["left_arrow", ["left_option"]]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("l", ["left_command"], ["any"])%>,
-                    "to": <%= to([["right_arrow", ["left_option"]]]) %>
+                    "to": <%= to([["right_arrow", ["left_option"]]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 }
             ]
         },
@@ -89,22 +89,26 @@
                 {
                     "type": "basic",
                     "from": <%= from("d", ["right_command"], ["any"])%>,
-                    "to": <%= to([["delete_or_backspace"]]) %>
+                    "to": <%= to([["delete_or_backspace"]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("f", ["right_command"], ["any"])%>,
-                    "to": <%= to([["delete_forward"]]) %>
+                    "to": <%= to([["delete_forward"]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("e", ["right_command"], ["any"])%>,
-                    "to": <%= to([["delete_or_backspace", ["right_option"]]]) %>
+                    "to": <%= to([["delete_or_backspace", ["right_option"]]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 },
                 {
                     "type": "basic",
                     "from": <%= from("r", ["right_command"], ["any"])%>,
-                    "to": <%= to([["delete_forward", ["right_option"]]]) %>
+                    "to": <%= to([["delete_forward", ["right_option"]]]) %>,
+                    "conditions": [<%= frontmost_application_unless("jetbrains") %>]
                 }
             ]
         }
