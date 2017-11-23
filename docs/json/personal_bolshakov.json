@@ -26,7 +26,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -53,7 +54,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -80,7 +82,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -107,7 +110,89 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change Command + P to Command + L, Command + . to Command + w",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^org\\.mozilla\\.firefox$",
+                "^com\\.google\\.Chrome$",
+                "^com\\.apple\\.Safari$"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": [
+                "command"
               ]
             }
           ]
@@ -218,7 +303,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -248,7 +334,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -280,7 +367,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -307,7 +395,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -337,7 +426,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]
@@ -367,7 +457,8 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.jetbrains\\."
+                "^com\\.jetbrains\\.",
+                "^com.jetbrains.rubymine-EAP"
               ]
             }
           ]

@@ -149,6 +149,7 @@ def frontmost_application(type, app_aliases)
 
   jetbrains_bundle_identifiers = [
     '^com\.jetbrains\.',
+    '^com.jetbrains.rubymine-EAP'
   ]
   # ----------------------------------------
 

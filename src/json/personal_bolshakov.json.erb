@@ -31,6 +31,27 @@
             ]
         },
         {
+            "description": "Change Command + P to Command + L, Command + . to Command + w",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("p", ["command"], ["any"])%>,
+                    "to": <%= to([["l", ["command"]]]) %>,
+                    "conditions": [<%= frontmost_application_if(["browser"]) %>]
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("comma", ["command"], ["any"])%>,
+                    "to": <%= to([["w", ["command"]]]) %>
+                },
+                {
+                    "type": "basic",
+                    "from": <%= from("y", ["command"], ["any"])%>,
+                    "to": <%= to([["f", ["command"]]]) %>
+                }
+            ]
+        },
+        {
             "description": "Change Command + I/J/K/L to Arrow Keys",
             "manipulators": [
                 {
